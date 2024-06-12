@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# List all hidden files in the current directory
+hidden_files=$(ls -Ad .* 2>/dev/null)
+
+# Check if there are any hidden files
+if [ -z "$hidden_files" ]; then
+  echo "No hidden files found in the current directory."
+else
+  echo "Hidden files in the current directory:"
+  echo "$hidden_files"
+fi
